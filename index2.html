@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website Landing Page - With Background Video Slider | Travel</title>
+    <link rel="stylesheet" href="./css/style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+    <audio autoplay loop hidden> <source src="1.mp3" type="audio/mpeg"> </audio>
+    
+
+    <header>
+      <a href="#" class="brand">AQWAVE</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <!-- <div class="navigation-items">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Explore</a>
+          <a href="#">Gallery</a>
+          <a href="#">Contact</a>
+        </div> -->
+      </div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="1.mp3" autoplay  loop></video>
+      <video class="video-slide" src="2.mp4" autoplay  loop></video>
+      <video class="video-slide" src="3.mp4" autoplay  loop></video>
+      <video class="video-slide" src="4.mp4" autoplay  loop></video>
+      <video class="video-slide" src="5.mp4" autoplay  loop></video>
+      <div class="content active">
+        <h1>Aqwave<br><span>Website</span></h1>
+        <p>Aqwave is a website that covers a range of diverse topics including blogging, AI tools, quantum physics, UPSC,
+           technology, and a coding platform. Blogging is a form of online writing that can cover a wide range of topics
+          and can be used to share information, promote a brand, or simply express oneself. AI tools refer to software 
+          programs or platforms that use artificial intelligence techniques, such as machine learning, to provide various
+          functionalities. Quantum physics deals with the behavior of matter and energy at the quantum level, and UPSC
+          refers to the Union Public Service Commission, which is responsible for selecting candidates for civil service
+          jobs in India. The website also covers technology-related topics and offers a coding platform for individuals to develop their coding skills.</p>
+        <a href="./Index3.html">EPICENTER</a>
+      </div>
+      <div class="content">
+        <h1>Technology<br><span>Website</span></h1>
+        <p>Technology-related websites are essential resources for staying informed and up-to-date on the latest
+          trends and developments in the industry. From mobile devices to cybersecurity, websites like TechCrunch,
+          Wired, CNET, and Engadget cover a wide range of topics. These websites provide valuable insights into 
+          emerging technologies and help shape public opinion, while online communities allow enthusiasts to share
+          their knowledge and ideas. With so  many resources available, staying informed about technology has
+          never been easier or more exciting.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Blogging<br><span>Website</span></h1>
+        <p>Blogging has become a popular way for individuals and businesses to share their thoughts, ideas, and 
+        expertise with the world. Blogging websites like WordPress, Blogger, and Medium have made it easy for
+        anyone to start a blog and reach a global audience. These platforms provide customizable templates, 
+        publishing tools, and analytics to help bloggers create and grow their online presence. With the power of
+        social media and search engines,blogging has become an essential tool for personal branding, thought
+        leadership, and content marketing.</p>
+        <a href="./index4.html">BLOGSPOT</a>
+      </div>
+      <div class="content">
+        <h1>AI Tool<br><span>Website</span></h1>
+        <p>AI tools have revolutionized the way businesses operate and solve complex problems. Websites like IBM Watson,
+           Google Cloud AI, and Microsoft Azure provide powerful tools and resources to help developers create and deploy
+            AI applications. These platforms offer machine learning models, natural language processing, computer vision,
+            and other advanced AI technologies. With these tools, businesses can automate tasks, gain insights from data,
+            and enhance customer experiences. As AI technology continues to advance, these websites are at the
+            forefront of innovation and are essential resources for businesses looking to leverage the power of
+            AI.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="content">
+        <h1>Stock marketing<br><span>Website</span></h1>
+        <p>Stock market-related websites provide valuable information and resources for investors and traders looking
+           to make informed decisions about buying and selling stocks. Websites like Yahoo Finance, MarketWatch, and 
+           Bloomberg offer real-time stock prices, news, analysis, and financial data. These platforms also provide tools 
+           for tracking portfolios, creating watchlists, and conducting research on companies and industries. With the
+          power of these websites, investors and traders can stay up-to-date on market trends and make informed 
+          decisions to maximize their returns.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+
+      var name = localStorage.getItem("name")
+      var msg = new SpeechSynthesisUtterance(`${name} welcome to AQWave`)
+                speechSynthesis.speak(msg)
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+
+  </body>
+</html>

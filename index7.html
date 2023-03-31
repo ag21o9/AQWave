@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AQWave - AGtech</title>
+    <link rel="icon" href="untitled.png" type="image/icon type" />
+    <link rel="stylesheet" href="css/style7.css" />
+  </head>
+  <script>
+    // var name1 = prompt("Hello Buddy! I want you to enter your name please");
+    // alert(name1);
+    // });
+    // alert("Hello ! Nice to meet yout " + name1);
+    function cls() {
+      var c = document.querySelector(".messages");
+      c.innerHTML = "";
+    }
+
+    function newDel() {
+      var ele = document.getElementById("query").value;
+
+      let l = document.createElement("li");
+      l.innerHTML = `<b>${ele}</b>`;
+      var c = document.querySelector(".messages");
+      c.appendChild(l);
+
+      // const options = {
+      //   method: "GET",
+      //   headers: {
+      //     "X-RapidAPI-Key":
+      //       "216d9c853bmshda45fc03d6c77b6p115a2djsnd14e46e332ef",
+      //     "X-RapidAPI-Host": "ai-chatbot.p.rapidapi.com",
+      //   },
+      // };
+
+      const options = {
+	method: 'POST',
+	headers: {
+		'content-type': 'application/json',
+		'X-RapidAPI-Key': '216d9c853bmshda45fc03d6c77b6p115a2djsnd14e46e332ef',
+		'X-RapidAPI-Host': 'waifu.p.rapidapi.com'
+	},
+	body: `{"user_id":"sample_user_id","message":"${ele}","from_name":"Boy","to_name":"Girl","situation":"Girl loves Boy.","translate_from":"auto","translate_to":"auto"}`
+};
+
+      
+      // var msg = `https://ai-chatbot.p.rapidapi.com/chat/free?message=${ele}&uid=user1`;
+
+      // fetch(msg, options)
+
+      let l2 = document.createElement("li");
+      fetch('https://waifu.p.rapidapi.com/v1/waifu', options)
+        // .then(response => response.json())
+        .then((respone)=>{
+          return respone.json();
+        })
+        .then((response) => {
+          console.log(response);
+          l2.textContent = "AQWave : " + response["response"];
+        })
+        .catch((err) => console.error(err));
+
+      // l.textContent = ele;
+
+      c.appendChild(l2);
+      // c.removeChild()
+
+      var t = document.querySelector(".tapori");
+      t.value = "";
+    }
+    function loaderfunc() {
+      var element = document.getElementsByClassName("loader-wrapper");
+      element.style.display = "none";
+    }
+  </script>
+  <body onload="loaderfunc">
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+    </div>
+    <nav>
+      <div class="logo">
+        <a href="#">AQWave</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <!-- <li><a href="#">Services</a></li> -->
+        <li>
+          <a href="https://www.instagram.com/abhijeet_gupta_21/">InstaPage</a>
+        </li>
+        <li><a href="index6.html">Contact</a></li>
+      </ul>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <div class="chat-container">
+      <div class="header">
+        <h2
+          style="
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+              'Lucida Sans', Arial, sans-serif;
+          "
+        >
+          AQWave
+        </h2>
+      </div>
+      <div class="chat-area">
+        <ul class="messages"></ul>
+      </div>
+      <div class="input-area">
+        <input
+          type="text"
+          placeholder="Enter your message"
+          id="query"
+          class="tapori"
+        />
+        <button onclick="newDel()">Send</button>
+        <button onclick="cls()">Clear</button>
+      </div>
+    </div>
+    <!-- <div class="foot"> -->
+    <footer class="footer">
+      <!-- <hr style="margin-top: 7%" /> -->
+      <p>&copy; 2023 AQwave . All rights reserved.</p>
+      <p>Designed by Abhi and Vaibhav.</p>
+    </footer>
+    <!-- </div> -->
+  </body>
+</html>

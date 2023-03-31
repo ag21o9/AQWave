@@ -1,0 +1,90 @@
+login page
+
+index.html -LOGIN PAGE
+   style.css
+   l1.jpg
+   l2.jpg
+   lb3.jpg
+   lb4.jpg
+   index.js
+----------------------------------------------------------------------------------------------------------------------------
+
+SECONDARY PAGE(FLIP PAGE)
+
+index2.html- SECONDARY PAGE
+   style2.css
+   1.mp3
+   close.jpg
+   menu.jpg
+   index2.js
+
+---------------------------------------------------------------------------------------------------------------------------
+
+HOME PAGE 
+
+index3.html-HOME PAGE
+    all.css
+    aos.css
+    fonts.css
+    owl.theme.default.min.css
+    owl.carousel.min.css
+    style3.css
+    fonts folder
+    aos.js
+    Jquery3.4.1.min.js
+    main.js
+    owl.carousel.min
+    webfonts folder
+    2.mp3
+    images 
+        {h1,h2,h3,h4,h5,h6,h7,h8,h9}
+        {hmain1,hmain2,hmain3,hmain3,hmain4,hmain5,hmain6,hmain7,hmain8}
+        {hside1,hside2,hside3,hside4,hside5}
+        {htp1,htp2,htp3}
+         hmainlogo
+--------------------------------------------------------------------------------------------------------------------------
+
+BLOGGING WEBSITE
+
+index4.html-BLOGGING PAGE
+     style4.css
+     index4.js
+     image
+        ['bw1.jpg', 'bw10.png', 'bw11.png', 'bw12.png', 'bw13.png', 'bw14.png', 'bw15.png', 'bw16.png', 'bw17.svg', 
+        'bw18.svg', 'bw19.svg', 'bw2.png', 'bw20.svg', 'bw21.svg', 'bw22.svg', 'bw23.svg', 'bw24.db', 'bw25.png', 'bw26.png',
+        'bw27.png', 'bw28.png','bw29.png', 'bw3.png', 'bw4.png', 'bw5.png', 'bw6.png', 'bw7.png', 'bw8.png', 'bw9.png', 'b_founder_logo.png']
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+DETAIL PAGE
+
+index5.html -DETAIL PAGE
+     style5.css
+     index5.js
+     image
+        ['d1.jpg', 'd2.jpg', 'd3.jpg', 'd4.jpg', 'd5.jpg', 'checked.png']
+---------------------------------------------------------------------------------------------------------------------------
+ CONTACT US
+
+index6.html-CONTACT PAGE
+     style6.css
+     ['bgcn1.png', 'bgcn2.jpg']
+     index6.js
+--------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+

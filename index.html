@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AQWave</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- <audio autoplay="true" src="audio//welcome.mp3" style="display: none;"></audio> -->
+    <div class="background"></div>
+    <div class="container">
+        <div class="item">
+            <h2 class="logo"><i class='bx bxl-xing'></i>AQWave</h2>
+            <div class="text-item">
+                <h2>Welcome! <br><span>
+                    To Our Website
+                </span></h2>
+                <p>We're thrilled to have you here.
+                 Explore and discover all that we have to offer. Thank you for visiting!</p>
+                <div class="social-icon">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="login-section">
+            <div class="form-box login">
+                <form action="/signup" method="POST">
+                    <h2>Intoduce Yourself</h2>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-envelope'></i></span>
+                        <input type="text" name="name" class="name1"  required >
+                        <label >First Name</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-envelope' ></i></span>
+                        <input type="text" name="name2" class="name2" required >
+                        <label>Last Name</label>
+                    </div>
+                    <div class="remember-password" class="passw">
+                        <label for=""><input type="checkbox">Like This Site</label>
+                        <a href="#"></a>
+                    </div>
+                    <button type="submit" class="btn">Login In</button>
+                    
+                </form>
+            </div>
+    <script src="./js/index.js"></script>
+            <script>
+                
+                // const mongoose = require('mongoose')
+                // let p = mongoose.connect('mongodb://localhost:27017/webdata')
+                // p.then(console.log('connection successfull')).catch(console.log('connection unsuccessfull'))
+
+
+                // document.querySelector("#alpha").play()
+                var msg = new SpeechSynthesisUtterance("Hello World! Welcome to AQWave Technology, please sign up by entering your name")
+                speechSynthesis.speak(msg)
+                function print(){
+                    var n = document.getElementsByClassName("name1")[0].value;
+                    var n2 = document.getElementsByClassName("name2")[0].value;
+                    // var psw = document.getElementsByClassName("passw").value;
+                    console.log(n);
+                    console.log(n2);
+                    // console.log(psw);
+                    localStorage.setItem("name",n);
+                    // return false;
+                    
+                }
+
+            </script>
+</body>
+
+</html>
+<!-- <div class="form-box register">
+    <form action="">
+
+        <h2>Sign Up</h2>
+
+        <div class="input-box">
+            <span class="icon"><i class='bx bxs-user'></i></span>
+            <input type="text" required>
+            <label >Username</label>
+        </div>
+        <div class="input-box">
+            <span class="icon"><i class='bx bxs-envelope'></i></span>
+            <input type="email" required>
+            <label >Email</label>
+        </div>
+        <div class="input-box">
+            <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+            <input type="password" required>
+            <label>Password</label>
+        </div>
+        <div class="remember-password">
+            <label for=""><input type="checkbox">I agree with this statment</label>
+        </div>
+        <button class="btn">Login In</button>
+        <div class="create-account">
+            <p>Already Have An Account? <a href="#" class="login-link">Sign In</a></p>
+        </div>
+    </form>
+</div>
+</div>
+</div> -->
