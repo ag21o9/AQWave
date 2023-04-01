@@ -27,13 +27,13 @@ db.then(() => {
 
 const port = 3000;
 
+app.use(express.static(path.join(__dirname, "")));
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => {
   // console.log("i am here");
   res.sendFile(path.join(__dirname, "/index.html"));
 });
-app.use(express.static(path.join(__dirname, "")));
 
 app.get("/coming", (req, res) => {
   // res.sendFile(path.join(__dirname,"/index.html"))
