@@ -1,14 +1,26 @@
 const express = require("express");
+const dotenv = require("dotenv");
 const app = express();
 const path = require("path");
 const mongoose = require("mongoose");
 const data = require("./db");
 const data2 = require("./db");
 
-db = mongoose.connect("mongodb://localhost:27017/aqwave");
 // db = mongoose.connect("mongodb://localhost:27017/aqwave");
+// db = mongoose.connect("mongodb://localhost:27017/aqwave"); important
 
+dotenv.config({path:'./config.env'})
+
+var db = process.env.DATABASE
+
+db = mongoose.connect(db)
 //import path from 'path'
+db.then(()=>{
+  console.log("successfully connected to database")
+}).catch((err)=>{
+  console.log('connection fail to the database')
+})
+
 
 const port = 3000;
 
