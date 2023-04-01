@@ -9,11 +9,11 @@ const data2 = require("./db");
 // db = mongoose.connect("mongodb://localhost:27017/aqwave");
 // db = mongoose.connect("mongodb://localhost:27017/aqwave"); important
 
-dotenv.config({path:'./config.env'})
+// dotenv.config({path:'./config.env'})
 
-var db = process.env.DATABASE
+// var db = process.env.DATABASE
 
-db = mongoose.connect(db)
+db = mongoose.connect("mongodb+srv://Abhijeet2109:abhijeet21o9@cluster0.ohwhhle.mongodb.net/?retryWrites=true&w=majority")
 //import path from 'path'
 db.then(()=>{
   console.log("successfully connected to database")
