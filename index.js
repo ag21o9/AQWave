@@ -6,6 +6,9 @@ const mongoose = require("mongoose");
 const data = require("./db");
 const data2 = require("./db");
 
+
+console.log("connected successfully")
+
 // db = mongoose.connect("mongodb://localhost:27017/aqwave");
 // db = mongoose.connect("mongodb://localhost:27017/aqwave"); important
 
