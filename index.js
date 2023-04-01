@@ -30,8 +30,8 @@ const port = 3000;
 app.use(express.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => {
-  console.log("i am here");
-  res.sendFile(path.join(__dirname, "/index3.html"));
+  // console.log("i am here");
+  res.sendFile(path.join(__dirname, "/index.html"));
 });
 app.use(express.static(path.join(__dirname, "")));
 
